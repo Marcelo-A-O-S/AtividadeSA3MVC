@@ -38,11 +38,10 @@ namespace AtividadeSA3MVC.services
             {
                 using (var criaArquivo = new StreamWriter(Caminho()))
                 {
-                    criaArquivo.WriteLine("Id,Nome,Idade");
+                    criaArquivo.WriteLine("Nome,Idade");
                 }
             }
-            using StreamReader ler = new StreamReader(Caminho());
-            var texto = ler.ReadLine();
+            
             string[] linhas = File.ReadAllLines(Caminho());
             int count = 0;
             foreach (var linha in linhas)
